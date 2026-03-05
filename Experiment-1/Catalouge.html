@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Catalouge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+NZ+Basic:wght@100..400&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-family: "Edu NSW ACT Cursive", cursive;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+            color: white;
+        }
+        .logo >div > a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo>svg {
+            background-color: aqua;
+            border-radius: 3px;
+            width: 1.5em;
+            height: 1.5em;
+            color: blue;
+
+            /* display: none; */
+        }
+
+        nav {
+            width: auto;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 5vh;
+            background-color: aquamarine;
+            font-size: 1.75rem;
+
+        }
+
+        nav>ul {
+            display: flex;
+            list-style: none;
+            gap: 1rem;
+            /* justify-content: space-around; */
+            align-items: center;
+            font-size: 1.2rem;
+            font-family: "Playwrite NZ Basic", cursive;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        nav>ul>li>a {
+            text-decoration: none;
+        }
+
+        a {
+            display: inline-block;
+            transition: transform 0.25s ease, color 0.25s ease;
+        }
+
+        a:hover {
+            transform: scale(1.1);
+            color: red;
+        }
+
+        main {
+            font-family: "Playwrite NZ Basic", cursive;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .container {
+            width: 70vw;
+            margin: auto;
+            text-align: center;
+            /* border: 2px solid black; */
+        }
+
+        .oneliner {
+            margin-top: 2rem;
+            font-size: 2.5rem;
+            color: skyblue;
+            /* font-family: "Edu NSW ACT Cursive", cursive;  */
+            font-family: "Pacifico", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .searchbox {
+            margin: 2rem;
+            /* height: 2rem; */
+        }
+
+        .searchbox>input {
+            /* height: 2.5rem; */
+            width: 35vw;
+            height: 3rem;
+            padding: 0 1.5rem;
+            /* padding-top: 0rem ; */
+            border-radius: 24px;
+            outline-color: #2EC4B6;
+            border: 3px solid #7FE3D1;
+            font-size: 1.1rem;
+            font-family: "Playwrite NZ Basic", cursive;
+            font-optical-sizing: auto;
+            font-weight: 250;
+            font-style: normal;
+
+        }
+
+        .searchbox>input::placeholder {
+            line-height: 1.5;
+            font-family: "Playwrite NZ Basic", cursive;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            color: #64748b;
+            font-size: 1rem;
+            /* padding-bottom: 2rem; */
+            text-align: left;
+        }
+
+        .Books-container {
+            display: flex;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin: auto;
+            width: 70vw;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .book {
+            width: 21vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            box-shadow: 0 4px 24px 3px rgba(7, 24, 101, 0.08);
+            padding: 1.5rem 0;
+            /* padding-left: 1rem; */
+            border-radius: 12px;
+            gap: 1rem;
+            transition: transform 0.25s ease;
+        }
+
+        .book:hover {
+            transform: scale(1.1);
+        }
+
+        .book>div:first-child {
+            margin: auto;
+
+        }
+
+        .book img {
+            width: 8rem;
+        }
+
+        .bookname {
+            margin-left: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .price {
+            margin-left: 2rem;
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
+            font-size: 1.1rem;
+        }
+
+        .Buy {
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
+            border: 2px solid #CBD5E1;
+            color: #64748B;
+            background-color: #F1F5F9;
+            border-radius: 12px;
+            padding: 0.5rem 1rem;
+            font-size: 1.1rem;
+            transition: transform 0.25s ease, color 0.25s ease;
+            cursor: pointer;
+        }
+
+        .Buy:hover {
+            transform: scale(1.04);
+        }
+
+        .cart {
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
+            border: 2px solid aquamarine;
+            border-radius: 12px;
+            padding: 0.5rem 1rem;
+            font-size: 1.1rem;
+            background-color: aquamarine;
+            color: green;
+            transition: transform 0.25s ease, color 0.25s ease;
+            cursor: pointer;
+        }
+
+        .cart:hover {
+            transform: scale(1.04);
+        }
+
+        .book>div:last-child {
+            display: flex;
+            /* align-items: center; */
+            justify-content: space-evenly;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.891 21.891">
+                    <path fill="currentColor" d="M18.266,11.592c-0.446-0.586-1.004-1.075-1.667-1.462c0.407-0.359,0.749-0.762,1.022-1.207
+		c0.552-0.897,0.831-1.871,0.831-2.893c0-1.087-0.311-2.138-0.923-3.122c-0.619-0.997-1.487-1.746-2.578-2.224
+		C13.9,0.224,12.574,0,10.898,0H3.346C2.859,0,2.464,0.395,2.464,0.883v20.126c0,0.488,0.395,0.882,0.882,0.882h7.675
+		c1.348,0,2.513-0.121,3.463-0.363c0.992-0.251,1.838-0.637,2.516-1.145c0.696-0.522,1.28-1.259,1.739-2.19
+		c0.456-0.929,0.688-1.944,0.688-3.019C19.427,13.811,19.036,12.607,18.266,11.592z M5.752,3.257c0-0.413,0.334-0.748,0.747-0.748
+		h3.407c1.313,0,2.235,0.09,2.817,0.273c0.676,0.212,1.204,0.616,1.571,1.198c0.346,0.55,0.522,1.186,0.522,1.893
+		c0,0.756-0.195,1.406-0.582,1.931c-0.388,0.528-0.956,0.906-1.685,1.123c-0.504,0.154-1.279,0.229-2.364,0.229H6.499
+		c-0.413,0-0.747-0.335-0.747-0.748C5.752,8.408,5.752,3.257,5.752,3.257z M15.099,17.498c-0.286,0.528-0.664,0.941-1.123,1.226
+		c-0.428,0.266-0.955,0.457-1.566,0.566c-0.341,0.063-0.872,0.093-1.666,0.093H6.499c-0.413,0-0.747-0.335-0.747-0.748v-5.861
+		c0-0.413,0.334-0.749,0.747-0.749h3.942c1.176,0,2.068,0.106,2.728,0.323c0.733,0.241,1.317,0.67,1.735,1.272
+		c0.413,0.595,0.622,1.295,0.622,2.083C15.526,16.371,15.383,16.974,15.099,17.498z" />
+                </svg>
+                <div><a href="../Experiment-2/Cart.html">BookNest</a></div>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Catalouge.html">Catalouge</a></li>
+                <li><a href="Biodata.html">Biodata</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="oneliner">Find the right book for your next chapter.</div>
+            <div class="searchbox"><input type="search" placeholder="Search books, authors, or topics" id="searching" />
+            </div>
+            <div class="Books-container">
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470664.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">Crime and Punishment</div>
+                    <div class="price">₹399</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470665.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">Atomic Habits</div>
+                    <div class="price">₹585</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470667.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">Electronics: A First Course</div>
+                    <div class="price">₹1,550</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470668.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">Dopamine Detox</div>
+                    <div class="price">₹149</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470669.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">On the Origin of Species</div>
+                    <div class="price">₹3,500</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470670.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">Influence: The Psychology of Persuasion</div>
+                    <div class="price">₹499</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470671.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">The Speeches of Adolf Hitler</div>
+                    <div class="price">₹899</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470673.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">Living Dangerously</div>
+                    <div class="price">₹250</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470674.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">The Selfish Gene</div>
+                    <div class="price">₹450</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470675.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">Tactics Time</div>
+                    <div class="price">₹850</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470676.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">The Complete Manual of Positional Chess</div>
+                    <div class="price">₹2,499</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470678.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">Thus Spoke Zarathustra</div>
+                    <div class="price">₹299</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/The psychology of money.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">The Psychology of Money</div>
+                    <div class="price">₹359</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+                <!--                 
+            </div>
+            <div class="Books-container"> -->
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470664.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">Crime and Punishment</div>
+                    <div class="price">₹399</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470665.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">Atomic Habits</div>
+                    <div class="price">₹585</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470667.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">Electronics: A First Course</div>
+                    <div class="price">₹1,550</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470668.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">Dopamine Detox</div>
+                    <div class="price">₹149</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470669.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">On the Origin of Species</div>
+                    <div class="price">₹3,500</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470670.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">Influence: The Psychology of Persuasion</div>
+                    <div class="price">₹499</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470671.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">The Speeches of Adolf Hitler</div>
+                    <div class="price">₹899</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+
+                <!-- <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470673.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">Living Dangerously</div>
+                    <div class="price">₹250</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div> -->
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470674.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">The Selfish Gene</div>
+                    <div class="price">₹450</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+
+
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470678.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">Thus Spoke Zarathustra</div>
+                    <div class="price">₹299</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470675.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">Tactics Time</div>
+                    <div class="price">₹850</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div>
+                        <img src="assets1/Books/6066706383404470676.jpg" alt="Book-image">
+                    </div>
+                    <div class="bookname">The Complete Manual of Positional Chess</div>
+                    <div class="price">₹2,499</div>
+                    <div>
+                        <div class="Buy">Buy Now</div>
+                        <div class="cart">Add To cart</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

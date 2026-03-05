@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Use of Css</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Kalam:wght@300;400;700&family=Sirivennela&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        *::after,
+        *::before,
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* background-image: url(assets/stardust.png); */
+        }
+
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(assets/photo-1550751827-4bd374c3f58b.avif);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            color: white;
+            min-height: 100vh;
+            font-family: "Google Sans Flex", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:
+                "slnt" 0,
+                "wdth" 100,
+                "GRAD" 0,
+                "ROND" 0;
+        }
+
+        /* .content{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    color: white;
+} */
+
+        header {
+            font-size: 5rem;
+            text-align: center;
+            margin-top: 1rem;
+            user-select: none;
+            text-shadow: 0px 0px 6px whitesmoke;
+
+        }
+
+        main {
+            width: 60vw;
+            margin: 1rem auto 0 auto;
+            /* display: flex;
+    flex-direction: column; */
+            font-size: 1.2rem;
+        }
+
+        #font1 {
+            font-family: "Kalam", cursive;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.5rem;
+
+        }
+
+        #font2 {
+            font-family: "Sirivennela", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 2rem;
+        }
+
+        .answer {
+            margin-left: 5vw;
+            margin-top: 0.5rem;
+        }
+
+        .question {
+            text-decoration: underline;
+        }
+
+        #style1 {
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.5rem;
+            text-shadow: 0px 0px 6px whitesmoke;
+        }
+
+        .question {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        #ans2 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(assets/photo-1550684848-fac1c5b4e853.jpg);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 20vh;
+            border-radius: 5px;
+            /* background-color: rgba(0, 0, 0, 0.75); */
+            /* width:40vw ; */
+        }
+
+        #ans3 {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        #link1 {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 0.3rem 1rem;
+            border-radius: 5px;
+        }
+
+        #link2 {
+            padding: 0.3rem 1rem;
+            border-radius: 5px;
+            color: #00ffff;
+            border: 2px solid #00ffff;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        #link2:hover {
+            transform: scale(1.05);
+            background-color: #00ffff;
+            color: #000000;
+            text-decoration: none;
+            box-shadow: 0px 0px 10px #00ffff;
+            /* border: 2px solid #00ffff; */
+        }
+
+        #link2:active {
+            box-shadow: 0px 0px 3px #00ffff;
+            transform: scale(0.9);
+        }
+
+        #ans4 {
+            height: 25vh;
+            position: relative;
+
+        }
+
+        #ans4>div {
+            transition: scale 0.25s ease, box-shadow 0.25s ease, z-index 0s;
+        }
+
+        #ans4>div:first-child {
+            width: 20vh;
+            height: 20vh;
+            background-color: aquamarine;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-100%);
+            z-index: 0;
+        }
+
+        #ans4>div:last-child {
+            width: 20vh;
+            height: 20vh;
+            background-color: rgb(181, 104, 104);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            z-index: 1;
+        }
+
+        #ans4>div:hover {
+            z-index: 20;
+            cursor: pointer;
+            scale: 1.1;
+            box-shadow: 0 15px 30px rgba(0, 255, 255, 0.3);
+        }
+
+        #ans5 {
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dotted #2c84e9;
+            border-radius: 20px;
+            color: #2c84e9;
+            cursor: url(assets/1828884.png), crosshair;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        CSS USES
+    </header>
+
+    <main>
+        <div id="first" class="sec">
+            <div class="question"> 1. Use of different font and text styles : </div>
+            <div class="answer">
+                <div id="font1">
+                    This Text is written using font : Kalam Static.
+                </div>
+                <div id="font2">
+                    This Text is written using font : Sirivennela Static.
+                </div>
+                <div id="style1">
+                    This Text is written using font-style : Italic.
+                </div>
+            </div>
+            <div class="question"> 2. Set a background image for both the page and single element on the page : </div>
+            <div class="answer" id="ans2"></div>
+            <div class="question"> 3. Define styles for links : </div>
+            <div class="answer" id="ans3">
+                <a href="#" id="link1">This is Default Link</a>
+                <a href="#" id="link2">This is Styled Link</a>
+            </div>
+            <div class="question"> 4. Working with layers : </div>
+            <div class="answer" id="ans4">
+                <div>z-index : 0</div>
+                <div>z-index : 1</div>
+            </div>
+            <div class="question"> 5. Adding a Customized cursor : </div>
+            <div class="answer" id="ans5">
+                Hover over this Area
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

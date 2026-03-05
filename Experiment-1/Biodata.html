@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Biodata</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+NZ+Basic:wght@100..400&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* .container{
+    background-image: url(assets1/wp9764004.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+     
+} */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-family: "Edu NSW ACT Cursive", cursive;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+            color: white;
+        }
+        .logo >div > a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo>svg {
+            background-color: aqua;
+            border-radius: 3px;
+            width: 1.5em;
+            height: 1.5em;
+            color: blue;
+
+            /* display: none; */
+        }
+
+        nav {
+            width: auto;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 5vh;
+            background-color: aquamarine;
+            font-size: 1.75rem;
+
+        }
+
+        nav>ul {
+            display: flex;
+            list-style: none;
+            gap: 1rem;
+            /* justify-content: space-around; */
+            align-items: center;
+            font-size: 1.2rem;
+            font-family: "Playwrite NZ Basic", cursive;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        nav>ul>li>a {
+            text-decoration: none;
+        }
+
+        main {
+            display: flex;
+            height: 80vh;
+            align-items: center;
+            justify-content: center;
+            /* box-shadow: 0 8px 24px rgba(7, 24, 101, 0.08); */
+            position: relative;
+
+        }
+
+        main ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(7, 1fr);
+            gap: 1rem;
+
+        }
+
+        #button {
+            /* grid-column:1/-1 ;
+            justify-self: center;
+            align-self: self-end; */
+            /* margin-top: 3rem; */
+            /* row-gap: 5rem; */
+            /* display: flex; */
+            margin: auto;
+            align-self: center;
+            /* transform: translate(); */
+            position: absolute;
+            bottom: 0rem;
+            width: 15%;
+        }
+
+        #question {
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 24px 3px rgba(7, 24, 101, 0.08);
+            padding: 3rem;
+            border-radius: 15px;
+        }
+
+        #photo {
+            grid-row: 1/-2;
+            grid-column: 3/4;
+        }
+
+        #photo>img {
+            border: 4px solid white;
+            /* box-shadow: 0 8px 24px rgba(7, 24, 101, 0.08); */
+            background: #eef2f7;
+            border-radius: 15px;
+            filter: contrast(1.5);
+            object-fit: cover;
+            height: 18rem;
+        }
+
+        main ul :nth-child(even) {
+
+            /* font-family: "Open Sans", sans-serif; */
+            font-family: "Playwrite NZ Basic", cursive;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        a {
+            display: inline-block;
+            transition: transform 0.25s ease, color 0.25s ease;
+        }
+
+        a:hover {
+            transform: scale(1.1);
+            color: red;
+        }
+
+        #b {
+            margin: 10px 0px 0px 10px;
+            padding: 10px 0px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: aquamarine;
+            color: darkgreen;
+            transition: transform 0.25s ease, color 0.25s ease;
+            font-size: 1rem;
+        }
+
+        #b:hover {
+            transform: scale(1.1);
+            color: #991515;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.891 21.891">
+                        <path fill="currentColor" d="M18.266,11.592c-0.446-0.586-1.004-1.075-1.667-1.462c0.407-0.359,0.749-0.762,1.022-1.207
+		c0.552-0.897,0.831-1.871,0.831-2.893c0-1.087-0.311-2.138-0.923-3.122c-0.619-0.997-1.487-1.746-2.578-2.224
+		C13.9,0.224,12.574,0,10.898,0H3.346C2.859,0,2.464,0.395,2.464,0.883v20.126c0,0.488,0.395,0.882,0.882,0.882h7.675
+		c1.348,0,2.513-0.121,3.463-0.363c0.992-0.251,1.838-0.637,2.516-1.145c0.696-0.522,1.28-1.259,1.739-2.19
+		c0.456-0.929,0.688-1.944,0.688-3.019C19.427,13.811,19.036,12.607,18.266,11.592z M5.752,3.257c0-0.413,0.334-0.748,0.747-0.748
+		h3.407c1.313,0,2.235,0.09,2.817,0.273c0.676,0.212,1.204,0.616,1.571,1.198c0.346,0.55,0.522,1.186,0.522,1.893
+		c0,0.756-0.195,1.406-0.582,1.931c-0.388,0.528-0.956,0.906-1.685,1.123c-0.504,0.154-1.279,0.229-2.364,0.229H6.499
+		c-0.413,0-0.747-0.335-0.747-0.748C5.752,8.408,5.752,3.257,5.752,3.257z M15.099,17.498c-0.286,0.528-0.664,0.941-1.123,1.226
+		c-0.428,0.266-0.955,0.457-1.566,0.566c-0.341,0.063-0.872,0.093-1.666,0.093H6.499c-0.413,0-0.747-0.335-0.747-0.748v-5.861
+		c0-0.413,0.334-0.749,0.747-0.749h3.942c1.176,0,2.068,0.106,2.728,0.323c0.733,0.241,1.317,0.67,1.735,1.272
+		c0.413,0.595,0.622,1.295,0.622,2.083C15.526,16.371,15.383,16.974,15.099,17.498z" />
+                    </svg>
+                    <div><a href="../Experiment-2/Cart.html">BookNest</a></div>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Catalouge.html">Catalouge</a></li>
+                    <li><a href="Biodata.html">Biodata</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="question">
+                <ul>
+                    <li>Name </li>
+                    <li>Raushan Kumar</li>
+                    <li>Roll No</li>
+                    <li>125113012</li>
+                    <li>Branch </li>
+                    <li>Microelectronics And VLSI</li>
+                    <li>Phone No </li>
+                    <li>00100000</li>
+                    <li>Email </li>
+                    <li> 125113012@nitkkr.ac.in</li>
+                    <li>Hostel </li>
+                    <li>Bhisma Bhawan H2 </li>
+                    <li>Address </li>
+                    <li>Madhubani Bihar </li>
+                    <!-- </ul>
+                    </div>
+                    <div id="answer">
+                    <ul> -->
+
+                    <div id="photo">
+                        <img src="assets1/student_img.avif" alt="Student photo">
+                    </div>
+                </ul>
+                <div id="button">
+                    <button id="b">EDIT</button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

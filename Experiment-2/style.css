@@ -1,0 +1,207 @@
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cormorant Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.banner {
+    background: #bd6a4f;
+    text-align: center;
+}
+
+nav svg {
+    height: 1.3rem;
+    fill: currentColor;
+    /* stroke: currentColor; */
+}
+
+.navigation {
+    display: flex;
+    width: 70vw;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation>ul {
+    list-style: none;
+    display: flex;
+    /* justify-content: space-around; */
+    gap: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.75rem 0;
+}
+
+.navigation>ul:last-child {
+    gap: 1.5rem;
+    padding-right: 1rem;
+}
+
+/* .navigation >ul:last-child > li:last-child > svg{
+    width: ;
+} */
+
+nav {
+    background: #9fb29b;
+    position: relative;
+}
+
+/* .navigation > ul:first-child{
+    position: relative;
+} */
+.tittle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.3rem;
+    font-weight: 600;
+
+    /* padding: 0.5rem; */
+}
+
+.tittle>a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header {
+    color: #ffffff;
+}
+
+main {
+    background: #f4f1e9;
+    min-height: 90vh;
+}
+
+.content {
+    width: 100vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.hover {
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.scale:hover {
+    transform: scale(1.2);
+    /* background: #000; */
+}
+
+.heading {
+    font-size: 3rem;
+    text-align: center;
+    padding: 2.5rem 0;
+    font-weight: 400;
+    scale: 1.20;
+}
+
+.form {
+    width: 40vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    /* min-height: 100vh; */
+}
+
+.form>input {
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 0.25rem 0.7rem;
+    font-style: italic;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+    background: rgb(239, 239, 239);
+    margin-bottom: 1rem;
+}
+
+.form input:focus {
+    outline: gray;
+    box-shadow: 0 0px 6px 1px rgba(7, 24, 101, 0.08);
+}
+
+.form label {
+    align-self: flex-start;
+    font-style: italic;
+}
+
+#Privacy-aggrement:focus {
+    box-shadow: none;
+    cursor: pointer;
+}
+
+#Privacy-aggrement {
+
+    align-self: flex-start;
+    width: 1.125rem;
+    height: 1.125rem;
+    /* size: 2rem; */
+    appearance: auto;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+}
+
+.Privacy-aggrement {
+    margin-top: 0.3rem;
+    /* flex: 1; */
+}
+
+.form>div:last-child {
+    display: flex;
+    justify-content: space-between;
+    /* flex: 1; */
+    align-items: center;
+    margin-top: 2.1rem;
+    /* column-gap: 3rem; */
+}
+
+.form a,
+.form a:visited {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1.5px;
+    color: #bd5431;
+}
+
+.Create-Account {
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: #bc6b50;
+    width: 15vw;
+    /* margin-top: 2rem; */
+    padding: 0.2rem 0.5rem;
+    align-self: flex-end;
+    color: #ffffff;
+    transition: transform 0.125s ease;
+    user-select: none;
+    border-radius: 2px;
+}
+
+.Create-Account:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+#go,#go:visited{
+    text-decoration: none;
+    color: inherit;
+}
