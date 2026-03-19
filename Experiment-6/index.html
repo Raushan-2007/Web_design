@@ -43,7 +43,7 @@
         let sum2 =0;
         while(counter--){
             let n = Number(prompt(`Enter the number ${5-counter}`));
-            if (isNaN(n)) counter++;
+            if (isNaN(n)){ counter++;alert("Enter a valid number")}
             
             else{ sum1+=n; array.push(n);}
         }
