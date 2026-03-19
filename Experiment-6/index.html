@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>EXPERIMENT-6</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        #container > h1{
+            border: 2px solid black;
+            padding: 2rem;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 5px;
+            background: lightyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="first">first</h1>
+        <h1 id="second">second</h1>
+    </div>
+
+    <script>
+        let array =[];
+        let counter = 5;
+        let sum1 =0;
+        let sum2 =0;
+        while(counter--){
+            let n = Number(prompt(`Enter the number ${5-counter}`));
+            if (isNaN(n)) counter++;
+            
+            else{ sum1+=n; array.push(n);}
+        }
+        for(let i=0 ;i<5 ;i++){
+            sum2+=array[i];
+        }
+
+        document.getElementById("first").innerText=`The sum of five integers entered using while loop is ${sum1}`;
+        document.getElementById("second").innerText=`The sum of five integers entered using for loop is ${sum2}`;
+    </script>
+</body>
+
+</html>

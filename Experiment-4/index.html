@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>EXPERIMENT-4</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #container{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        #container > h1{
+            border: 2px solid black;
+            padding: 2rem;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 5px;
+            background: lightyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+    </div>
+
+    <script>
+        let n1 = Number(prompt("Enter the first Number"));
+        let n2 = Number(prompt("Enter the second Number"));
+        let msg;
+        if (isNaN(n1) || isNaN(n2)) msg = "Enter a valid number";
+        else if (n1 > n2) msg = `${n1} is greater than ${n2}`;
+        else if (n2 > n1) msg = `${n2} is greater than ${n1}`;
+        else msg = ` Both ${n1} and ${n2} are Equal`;
+      
+        document.getElementById("container").innerHTML = `<h1>${msg}</h1>`;
+    </script>
+</body>
+
+</html>
